@@ -3,13 +3,14 @@ import "./Credits.css";
 
 export default function Credits() {
 	return (
-		<div>
-			<span className="credit">
+		<div className="credits">
+			<br />
+			<footer>
 				<a
 					className="codeSource"
 					href="https://github.com/SMei201900/recipe_app"
 					target="_blank"
-					rel="noreferrer"
+					rel="noreferrer noopener"
 				>
 					Open source code
 				</a>{" "}
@@ -18,20 +19,21 @@ export default function Credits() {
 					className="profile"
 					href="https://www.linkedin.com/in/sally-mei-1a4439210/"
 					target="_blank"
-					rel="noreferrer"
+					rel="noreferrer noopener"
 				>
 					Sally Mei
-				</a>{" "}
-				and{" "}
+				</a>
+				. Hosted by{" "}
 				<a
 					className="hostSite"
-					href="https://condescending-swartz-356e87.netlify.app/"
+					href="https://vigorous-mcnulty-ccc11c.netlify.app/"
 					target="_blank"
-					rel="noreferrer"
+					rel="noreferrer noopener"
 				>
-					hosted by Netlify
+					Netlify
 				</a>
-			</span>
+				.
+			</footer>
 		</div>
 	);
 }

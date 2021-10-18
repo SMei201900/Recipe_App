@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Credits from "./Credits";
+import Food from "./Food";
 
 export default function App() {
 	return (
@@ -8,8 +9,12 @@ export default function App() {
 			<header>
 				<h1> Recipe App </h1>
 			</header>
-			<br />
-			<Credits />
+			<main>
+				<Food />
+			</main>
+			<section>
+				<Credits />
+			</section>
 		</div>
 	);
 }
