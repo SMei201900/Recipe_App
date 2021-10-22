@@ -11,30 +11,29 @@ export default function Food() {
 
 	function search(event) {
 		event.preventDefault();
-		let apiKey = ``;
-		let apiURL = ``;
+		apiID = `6a2ac39a`;
+		let apiKey = `6ab8046c942dd274ff215bc782a736fc`;
+		let apiURL = `https://api.edamam.com/search?q=${word}&app_id=${apiID}&app_key=${apiKey}&" `;
 		axios.get(apiURL).then(handleResponse);
 	}
 
-	function handleSearch(event) {
+	function handleWordChange(event) {
 		setWord(event.target.value);
 	}
 
 	return (
 		<div className="Food">
-			<section className="results">
-				<div className="searchEngine">
-					<form onSubmit={search}>
-						<input
-							type="search"
-							autoFocus={true}
-							onChange={handleSearch}
-							placeholder="Search recipe..."
-						/>
-					</form>
-					<div className="hint">Suggested words: chicken, egg</div>
-				</div>
-			</section>
+			<div className="searchEngine">
+				<form onSubmit={search}>
+					<input
+						type="search"
+						autoFocus={true}
+						onChange={handleWordChange}
+						placeholder="Search recipe..."
+					/>
+				</form>
+			</div>
+			<div className="hint">Suggested words: chicken, egg</div>
 		</div>
 	);
 }

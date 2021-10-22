@@ -3,12 +3,13 @@
 	padding: 10px;
 }
 
-.results input {
+input {
+	font-size: 14px;
 	width: 300px;
-	padding: 10px;
 	border: 3px solid #fbceb1;
 	border-radius: 12px;
 	color: #efc8aa;
+	padding: 10px;
 	margin: 5px;
 }
 
