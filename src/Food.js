@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Food.css";
 
 export default function Food() {
 	let [word, setWord] = useState("");
@@ -21,7 +22,7 @@ export default function Food() {
 	return (
 		<div className="Food">
 			<h1>Type an ingredient and we'll return some recipes for you</h1>
-			<div>
+			<div className="searchEngine">
 				<form onSubmit={search}>
 					<input type="search" autoFocus={true} onChange={handleSearch} />
 				</form>
