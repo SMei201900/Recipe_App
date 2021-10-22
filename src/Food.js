@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Food.css";
 
 export default function Food() {
@@ -21,13 +22,19 @@ export default function Food() {
 
 	return (
 		<div className="Food">
-			<h1>Type an ingredient and we'll return some recipes for you</h1>
-			<div className="searchEngine">
-				<form onSubmit={search}>
-					<input type="search" autoFocus={true} onChange={handleSearch} />
-				</form>
-			</div>
-			<div className="hint">Suggested words: chicken, egg</div>
+			<section className="results">
+				<div className="searchEngine">
+					<form onSubmit={search}>
+						<input
+							type="search"
+							autoFocus={true}
+							onChange={handleSearch}
+							placeholder="Search recipe..."
+						/>
+					</form>
+					<div className="hint">Suggested words: chicken, egg</div>
+				</div>
+			</section>
 		</div>
 	);
 }
