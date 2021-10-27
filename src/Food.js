@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Food.css";
 
 export default function Food() {
+	let [timeoutID, updateTimeout] = useState();
 	let [word, setWord] = useState("");
 
 	function handleResponse(response) {
@@ -11,7 +12,7 @@ export default function Food() {
 
 	function search(event) {
 		event.preventDefault();
-		apiID = `6a2ac39a`;
+		let apiID = `6a2ac39a`;
 		let apiKey = `6ab8046c942dd274ff215bc782a736fc`;
 		let apiURL = `https://api.edamam.com/search?q=${word}&app_id=${apiID}&app_key=${apiKey}&" `;
 		axios.get(apiURL).then(handleResponse);
@@ -19,6 +20,9 @@ export default function Food() {
 
 	function handleWordChange(event) {
 		setWord(event.target.value);
+		clearTimeout(timeoutID);
+		let timeout = setTimeout(() => console.log("Api Call"), 500);
+		updateTimeout(timeout);
 	}
 
 	return (
