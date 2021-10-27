@@ -2,28 +2,14 @@ footer {
 	text-align: center;
 }
 
-.profile {
-	text-decoration: none;
-}
-
-.profile:hover {
-	text-decoration: underline;
-	transition: all 200ms ease-in-out;
-}
-
-.codeSource {
-	text-decoration: none;
-}
-
-.codeSource:hover {
-	text-decoration: underline;
-	transition: all 200ms ease-in-out;
-}
-
+.profile,
+.codeSource,
 .hostSite {
 	text-decoration: none;
 }
 
+.profile:hover,
+.codeSource:hover,
 .hostSite:hover {
 	text-decoration: underline;
 	transition: all 200ms ease-in-out;
