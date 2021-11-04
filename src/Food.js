@@ -3,11 +3,15 @@ import axios from "axios";
 import "./Food.css";
 
 export default function Food() {
-	let [timeoutID, updateTimeout] = useState();
+	//let [timeoutID, updateTimeout] = useState();
 	let [word, setWord] = useState("");
+	let [recipeData, setRecipeData] = useState({});
 
 	function handleResponse(response) {
 		console.log(response);
+		setRecipeData({
+			name: response.data.hits[0].recipe.label,
+		});
 	}
 
 	function search(event) {
@@ -20,9 +24,9 @@ export default function Food() {
 
 	function handleWordChange(event) {
 		setWord(event.target.value);
-		clearTimeout(timeoutID);
-		let timeout = setTimeout(() => console.log("Api Call"), 500);
-		updateTimeout(timeout);
+		//clearTimeout(timeoutID);
+		//let timeout = setTimeout(() => console.log(event), 500);
+		//updateTimeout(timeout);
 	}
 
 	return (
@@ -38,6 +42,8 @@ export default function Food() {
 				</form>
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
+			<div>Name: {recipeData.name}</div>
+			<div>this is where handleResponse will display the response</div>
 		</div>
 	);
 }
