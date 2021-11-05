@@ -5,18 +5,18 @@ import RecipeInfo from "./RecipeInfo";
 
 export default function Food() {
 	let [word, setWord] = useState("");
-	let [recipeData, setRecipeData] = useState({});
-	let [second, setSecond] = useState({});
+	let [zero, setZero] = useState({});
+	let [one, setOne] = useState({});
 
 	function handleResponse(response) {
 		console.log(response.data);
-		setRecipeData({
+		setZero({
 			name: response.data.hits[0].recipe.label,
 			calories: response.data.hits[0].recipe.calories,
 			cuisineType: response.data.hits[0].recipe.cuisineType,
 		});
 
-		setSecond({
+		setOne({
 			name: response.data.hits[1].recipe.label,
 			calories: response.data.hits[1].recipe.calories,
 			cuisineType: response.data.hits[1].recipe.cuisineType,
@@ -49,11 +49,11 @@ export default function Food() {
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
 			<section className="card">
-				<div>Name: {recipeData.name}</div>
-				<div>Calories: {recipeData.calories}</div>
-				<div>Cuisine type: {second.cuisineType}</div>
+				<div>Name: {zero.name}</div>
+				<div>Calories: {zero.calories}</div>
+				<div>Cuisine type: {one.cuisineType}</div>
 			</section>
-			<RecipeInfo data={recipeData} />
+			<RecipeInfo zero={zero} one={one} />
 		</div>
 	);
 }
