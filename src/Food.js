@@ -16,8 +16,6 @@ export default function Food() {
 			cuisineType: response.data.hits[0].recipe.cuisineType,
 		});
 
-		//this means I have to do map here but how do I do that?
-
 		setSecond({
 			name: response.data.hits[1].recipe.label,
 			calories: response.data.hits[1].recipe.calories,
