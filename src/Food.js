@@ -6,6 +6,7 @@ import RecipeInfo from "./RecipeInfo";
 export default function Food() {
 	let [word, setWord] = useState("");
 	let [recipeData, setRecipeData] = useState({});
+	let [second, setSecond] = useState({});
 
 	function handleResponse(response) {
 		console.log(response.data);
@@ -16,6 +17,12 @@ export default function Food() {
 		});
 
 		//this means I have to do map here but how do I do that?
+
+		setSecond({
+			name: response.data.hits[1].recipe.label,
+			calories: response.data.hits[1].recipe.calories,
+			cuisineType: response.data.hits[1].recipe.cuisineType,
+		});
 	}
 
 	function search(event) {
@@ -46,7 +53,7 @@ export default function Food() {
 			<section className="card">
 				<div>Name: {recipeData.name}</div>
 				<div>Calories: {recipeData.calories}</div>
-				<div>Cuisine type: {recipeData.cuisineType}</div>
+				<div>Cuisine type: {second.cuisineType}</div>
 			</section>
 			<RecipeInfo data={recipeData} />
 		</div>
