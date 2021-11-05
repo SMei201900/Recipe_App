@@ -14,6 +14,8 @@ export default function Food() {
 			calories: response.data.hits[0].recipe.calories,
 			cuisineType: response.data.hits[0].recipe.cuisineType,
 		});
+
+		//this means I have to do map here but how do I do that?
 	}
 
 	function search(event) {
