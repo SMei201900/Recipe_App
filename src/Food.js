@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Food.css";
 
 export default function Food() {
-	//let [timeoutID, updateTimeout] = useState();
 	let [word, setWord] = useState("");
 	let [recipeData, setRecipeData] = useState({});
 
@@ -26,9 +25,6 @@ export default function Food() {
 
 	function handleWordChange(event) {
 		setWord(event.target.value);
-		//clearTimeout(timeoutID);
-		//let timeout = setTimeout(() => console.log(event), 500);
-		//updateTimeout(timeout);
 	}
 
 	return (
@@ -45,8 +41,8 @@ export default function Food() {
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
 			<div>Name: {recipeData.name}</div>
-			<div> Calories: {recipeData.calories}</div>
-			<div> cuisine type: {recipeData.cuisineType}</div>
+			<div>Calories: {recipeData.calories}</div>
+			<div>Cuisine type: {recipeData.cuisineType}</div>
 		</div>
 	);
 }
