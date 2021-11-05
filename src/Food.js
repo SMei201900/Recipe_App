@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Food.css";
+import RecipeInfo from "./RecipeInfo";
 
 export default function Food() {
 	let [word, setWord] = useState("");
-	let [recipeData, setRecipeData] = useState({});
+	let [recipeData, setRecipeData] = useState();
+
+	//let [recipeData, setRecipeData] = useState({});
 
 	function handleResponse(response) {
 		console.log(response.data);
-		//setRecipeData(response.data.hits);
+		setRecipeData(response.data.hits);
 
 		/* This works: 
 			setRecipeData({
@@ -50,6 +53,7 @@ export default function Food() {
 				</form>
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
+			<RecipeInfo results={recipeData} />
 		</div>
 	);
 }
