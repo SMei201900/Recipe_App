@@ -11,6 +11,8 @@ export default function Food() {
 		console.log(response);
 		setRecipeData({
 			name: response.data.hits[0].recipe.label,
+			calories: response.data.hits[0].recipe.calories,
+			cuisineType: response.data.hits[0].recipe.cuisineType,
 		});
 	}
 
@@ -43,7 +45,8 @@ export default function Food() {
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
 			<div>Name: {recipeData.name}</div>
-			<div>this is where handleResponse will display the response</div>
+			<div> Calories: {recipeData.calories}</div>
+			<div> cuisine type: {recipeData.cuisineType}</div>
 		</div>
 	);
 }
