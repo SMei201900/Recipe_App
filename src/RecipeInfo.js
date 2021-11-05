@@ -25,8 +25,7 @@ SO
 
 	return (
 		<div className="RecipeInfo">
-			<h1> where are </h1>
-			<div>{props.results}</div>
+			<h1> where are and {props.data.name} </h1>{" "}
 		</div>
 	);
 }

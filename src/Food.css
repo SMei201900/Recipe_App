@@ -18,3 +18,8 @@ input {
 	text-align: center;
 	margin: 2px;
 }
+
+.card {
+	background: white;
+	padding: 30px 100px;
+}
