@@ -1,10 +1,17 @@
 import React from "react";
 
 export default function RecipeInfo(props) {
-	return (
-		<div className="RecipeInfo">
-			<h1> where are and {props.zero.name} </h1>{" "}
-			<h2> index 1 {props.one.name}</h2>
-		</div>
-	);
+	if (props.zero && props.one && props.two && props.three && props.four) {
+		return (
+			<div className="RecipeInfo">
+				<section className="card">
+					<div>Name: {props.zero.name}</div>
+					<div>Calories: {props.zero.calories}</div>
+					<div>Cuisine type: {props.zero.cuisineType}</div>
+				</section>
+			</div>
+		);
+	} else {
+		return <div> No results please try searching for something else</div>;
+	}
 }

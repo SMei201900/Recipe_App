@@ -7,6 +7,9 @@ export default function Food() {
 	let [word, setWord] = useState("");
 	let [zero, setZero] = useState({});
 	let [one, setOne] = useState({});
+	let [two, setTwo] = useState({});
+	let [three, setThree] = useState({});
+	let [four, setFour] = useState({});
 
 	function handleResponse(response) {
 		console.log(response.data);
@@ -20,6 +23,24 @@ export default function Food() {
 			name: response.data.hits[1].recipe.label,
 			calories: response.data.hits[1].recipe.calories,
 			cuisineType: response.data.hits[1].recipe.cuisineType,
+		});
+
+		setTwo({
+			name: response.data.hits[2].recipe.label,
+			calories: response.data.hits[2].recipe.calories,
+			cuisineType: response.data.hits[2].recipe.cuisineType,
+		});
+
+		setThree({
+			name: response.data.hits[3].recipe.label,
+			calories: response.data.hits[3].recipe.calories,
+			cuisineType: response.data.hits[3].recipe.cuisineType,
+		});
+
+		setFour({
+			name: response.data.hits[4].recipe.label,
+			calories: response.data.hits[4].recipe.calories,
+			cuisineType: response.data.hits[4].recipe.cuisineType,
 		});
 	}
 
@@ -53,7 +74,7 @@ export default function Food() {
 				<div>Calories: {zero.calories}</div>
 				<div>Cuisine type: {one.cuisineType}</div>
 			</section>
-			<RecipeInfo zero={zero} one={one} />
+			<RecipeInfo zero={zero} one={one} two={two} three={three} four={four} />
 		</div>
 	);
 }
