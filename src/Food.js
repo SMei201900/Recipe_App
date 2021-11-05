@@ -7,12 +7,22 @@ export default function Food() {
 	let [recipeData, setRecipeData] = useState({});
 
 	function handleResponse(response) {
-		console.log(response);
-		setRecipeData({
+		console.log(response.data);
+		//setRecipeData(response.data.hits);
+
+		/* This works: 
+			setRecipeData({
 			name: response.data.hits[0].recipe.label,
 			calories: response.data.hits[0].recipe.calories,
 			cuisineType: response.data.hits[0].recipe.cuisineType,
-		});
+		})
+
+		Within RETURN AND UNDER HINTS:
+			<div>Name: {recipeData.name}</div>
+			<div>Calories: {recipeData.calories}</div>
+			<div>Cuisine type: {recipeData.cuisineType}</div>
+
+		*/
 	}
 
 	function search(event) {
@@ -40,9 +50,6 @@ export default function Food() {
 				</form>
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
-			<div>Name: {recipeData.name}</div>
-			<div>Calories: {recipeData.calories}</div>
-			<div>Cuisine type: {recipeData.cuisineType}</div>
 		</div>
 	);
 }
