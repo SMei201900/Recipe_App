@@ -7,8 +7,12 @@ export default function RecipeInfo(props) {
 			<div className="RecipeInfo">
 				<section className="card">
 					<h3>Name: {props.zero.name}</h3>
-					<div>Calories: {props.zero.calories}</div>
-					<div>Cuisine type: {props.zero.cuisineType}</div>
+					<h4> Ingredients</h4>
+					<ul>
+						<li>egg</li>
+						<li>pasta</li>
+						<li>olive oil</li>
+					</ul>
 				</section>
 			</div>
 		);

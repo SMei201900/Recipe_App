@@ -16,32 +16,25 @@ export default function Food() {
 
 		setZero({
 			name: response.data.hits[0].recipe.label,
-			calories: response.data.hits[0].recipe.calories,
-			cuisineType: response.data.hits[0].recipe.cuisineType,
+			//image goes before name
+			//source --> owner of recipe/url
+			//url
 		});
 
 		setOne({
 			name: response.data.hits[1].recipe.label,
-			calories: response.data.hits[1].recipe.calories,
-			cuisineType: response.data.hits[1].recipe.cuisineType,
 		});
 
 		setTwo({
 			name: response.data.hits[2].recipe.label,
-			calories: response.data.hits[2].recipe.calories,
-			cuisineType: response.data.hits[2].recipe.cuisineType,
 		});
 
 		setThree({
 			name: response.data.hits[3].recipe.label,
-			calories: response.data.hits[3].recipe.calories,
-			cuisineType: response.data.hits[3].recipe.cuisineType,
 		});
 
 		setFour({
 			name: response.data.hits[4].recipe.label,
-			calories: response.data.hits[4].recipe.calories,
-			cuisineType: response.data.hits[4].recipe.cuisineType,
 		});
 	}
 
