@@ -1,5 +1,15 @@
 .card {
-	color: blue;
-	background: #fdcaac;
-	padding: 30px 100px;
+	color: black;
+	background: #fff6dd;
+	padding: 30px 25px;
+	border-radius: 25px;
+}
+
+.RecipeInfo .card h3 {
+	margin-top: 1.5px;
+	margin-bottom: 1.5px;
+}
+
+.RecipeInfo .card div {
+	font-size: 14px;
 }
