@@ -13,6 +13,7 @@ export default function Food() {
 
 	function handleResponse(response) {
 		console.log(response.data);
+
 		setZero({
 			name: response.data.hits[0].recipe.label,
 			calories: response.data.hits[0].recipe.calories,
@@ -69,11 +70,7 @@ export default function Food() {
 				</form>
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
-			<section className="card">
-				<div>Name: {zero.name}</div>
-				<div>Calories: {zero.calories}</div>
-				<div>Cuisine type: {one.cuisineType}</div>
-			</section>
+			<div>Name: {zero.name}</div>
 			<RecipeInfo zero={zero} one={one} two={two} three={three} four={four} />
 		</div>
 	);

@@ -1,4 +1,5 @@
 import React from "react";
+import "./RecipeInfo.css";
 
 export default function RecipeInfo(props) {
 	if (props.zero && props.one && props.two && props.three && props.four) {
@@ -12,6 +13,6 @@ export default function RecipeInfo(props) {
 			</div>
 		);
 	} else {
-		return <div> No results please try searching for something else</div>;
+		return <div> No results. Please try searching for something else</div>;
 	}
 }
