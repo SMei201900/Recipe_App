@@ -11,3 +11,8 @@ h2 {
 	margin-top: 2px;
 	margin-bottom: 2px;
 }
+
+img {
+	display: block;
+	margin: auto;
+}

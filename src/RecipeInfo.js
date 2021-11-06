@@ -6,7 +6,7 @@ export default function RecipeInfo(props) {
 		return (
 			<div className="RecipeInfo">
 				<section className="card">
-					<div>Name: {props.zero.name}</div>
+					<h3>Name: {props.zero.name}</h3>
 					<div>Calories: {props.zero.calories}</div>
 					<div>Cuisine type: {props.zero.cuisineType}</div>
 				</section>
