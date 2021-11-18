@@ -7,12 +7,20 @@ export default function RecipeInfo(props) {
 			<div className="RecipeInfo">
 				<section className="card">
 					<h3>Name: {props.zero.name}</h3>
+					<img src={props.zero.image} alt={props.zero.name} />
 					<h4> Ingredients</h4>
 					<ul>
-						<li>egg</li>
-						<li>pasta</li>
-						<li>olive oil</li>
+						<li>{props.zero.iOne}</li>
+						<li>{props.zero.iTwo}</li>
+						<li>{props.zero.iThree}</li>
 					</ul>
+					<p>
+						{" "}
+						For more information see{" "}
+						<a href={props.zero.url} target="_blank" rel="noopener noreferrer">
+							source{" "}
+						</a>
+					</p>
 				</section>
 			</div>
 		);

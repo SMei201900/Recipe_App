@@ -16,6 +16,11 @@ export default function Food() {
 
 		setZero({
 			name: response.data.hits[0].recipe.label,
+			iOne: response.data.hits[0].recipe.ingredientLines[0],
+			iTwo: response.data.hits[0].recipe.ingredientLines[1],
+			iThree: response.data.hits[0].recipe.ingredientLines[2],
+			source: response.data.hits[0].recipe.source,
+			url: response.data.hits[0].recipe.url,
 			//image goes before name
 			//source --> owner of recipe/url
 			//url
@@ -23,6 +28,11 @@ export default function Food() {
 
 		setOne({
 			name: response.data.hits[1].recipe.label,
+			iOne: response.data.hits[1].recipe.ingredientLines[0],
+			iTwo: response.data.hits[1].recipe.ingredientLines[1],
+			iThree: response.data.hits[1].recipe.ingredientLines[2],
+			source: response.data.hits[1].recipe.source,
+			url: response.data.hits[1].recipe.url,
 		});
 
 		setTwo({
@@ -63,7 +73,6 @@ export default function Food() {
 				</form>
 			</div>
 			<div className="hint">Suggested words: chicken, egg</div>
-			<div>Name: {zero.name}</div>
 			<RecipeInfo zero={zero} one={one} two={two} three={three} four={four} />
 		</div>
 	);
